@@ -10,7 +10,7 @@ pipeline {
 
     stages {
         stage('rfam-connect') {
-        steps {
+            steps {
                 sh 'mysql -u ${DB_USER} -h ${DB_HOST} -P ${DB_PORT} -D ${DB_DATABASE} < script.sql'
             }
         }
